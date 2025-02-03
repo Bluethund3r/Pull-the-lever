@@ -1,5 +1,0 @@
-from machine import pinx
-x = Pin(14, Pin.OUT)
-y = Pin( , Pin.OUT)
-z = Pin( , Pin.OUT)
-
