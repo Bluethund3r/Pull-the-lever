@@ -7,6 +7,8 @@ MAX_BLINKS = 20
 def blink_led():
     led.toggle()
     time.sleep(SLEEP_TIME)
+    led.toggle()
+    time.sleep(SLEEP_TIME)
     
 led = Pin(25, Pin.OUT)
 
