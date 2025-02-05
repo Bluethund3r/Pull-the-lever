@@ -1,12 +1,20 @@
-from machine import pin
-import time 
+import time
+from machine import Pin
 
-x = Pin(25, Pin.OUT)
-#names x as pin for quick reference
+SLEEP_TIME = 1
+MAX_BLINKS = 20
 
-while True:
-  x.value(1)
-  x.value(0)
-  x.value(1)
-  x.value(0)
-#Turns led on and off in a blinking motion, alerts user code has been recieved/transmitted
+def blink_led():
+    led.toggle()
+    time.sleep(SLEEP_TIME)
+    
+led = Pin(25, Pin.OUT)
+
+led.off()
+count = 0
+
+while count < MAX_BLINKS:
+    blink_led()
+    count =  count + 1
+led.off()
+print('done')
